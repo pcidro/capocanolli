@@ -1,0 +1,211 @@
+h1,
+h2,
+p,
+ul,
+li,
+a,
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #fdf6e3;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  height: 200px;
+  margin-top: -60px;
+}
+
+.header-bg {
+  background: #a8bba5;
+  height: 80px;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header-menu {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: -60px;
+  flex-wrap: wrap;
+}
+
+.header-menu a {
+  padding: 20px;
+  color: rgb(9, 68, 9);
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  transition: color 0.3s ease;
+}
+
+.header-menu a:hover {
+  color: #052e05;
+  text-decoration: underline;
+}
+
+.hero {
+  background-image: url("/img/banner-cannoli.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-texto {
+  /* background-color: rgb(9, 68, 9); */
+  padding: 30px;
+  border-radius: 10px;
+  color: #0b3d0b;
+  background: #a8bba5;
+  color: black;
+}
+
+.hero-texto p {
+  margin-bottom: 20px;
+  /* color: #f0f0f0; */
+  font-weight: 400;
+  color: #0b3d0b;
+  margin-top: 5px;
+}
+
+.hero a {
+  /* background-color: #fdf6e3; */
+  background-color: #0b3d0b;
+  /* color: #0b3d0b; */
+  color: #fdf6e3;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 12px;
+}
+
+.hero a:hover {
+  text-decoration: underline;
+  background-color: #064c06;
+}
+.sabores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 50px;
+  padding: 60px;
+}
+
+.sabor {
+  background: #a8bba5;
+  padding: 30px;
+  flex: 1 1 150px;
+  min-width: 150px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sabor h2 {
+  text-align: center;
+  font-family: "IBM Plex Mono", monospace;
+  margin-bottom: 15px;
+}
+
+.sabor img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.sabores-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sabores-container h1 {
+  text-align: center;
+  margin-top: 90px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 4rem;
+  color: #5c6e58;
+  font-weight: 700;
+}
+
+.sabor p {
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.sabor button {
+  border: none;
+  color: white;
+  background-color: #052e05;
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  align-self: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.sabor button:hover {
+  background-color: #064d06;
+  transition: background 0.3s ease;
+}
+
+@media (max-width: 870px) {
+  .sabores {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-bg {
+    background: none;
+    padding-bottom: 120px;
+  }
+
+  .header {
+  }
+
+  .header-menu a {
+    font-size: 12px;
+  }
+}
