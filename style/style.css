@@ -35,6 +35,11 @@ a {
   text-decoration: none;
 }
 
+blockquote {
+  margin: 0px;
+  padding: 0px;
+}
+
 .logo {
   height: 200px;
   margin-top: -60px;
@@ -191,6 +196,167 @@ a {
   transition: background 0.3s ease;
 }
 
+.conteudo-depoimentos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: ce;
+}
+
+.img-depoimento img {
+  width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.depoimentos {
+  padding: 60px;
+  background-color: #fef9f4;
+  border-radius: 12px;
+}
+
+.texto-depoimento blockquote {
+  margin-bottom: 40px;
+  font-style: italic;
+  font-size: 1.4rem;
+  color: #444;
+  border-left: 4px solid #caa37d;
+  padding-left: 16px;
+  line-height: 1.6;
+}
+
+.texto-depoimento {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.depoimentos h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #5c6e58;
+  font-weight: 700;
+  font-family: "IBM Plex Mono", monospace;
+  margin-bottom: 30px;
+}
+
+footer {
+  border-top: 2px solid #bfa34a; 
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  align-items: center;
+  gap: 40px;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+
+
+
+.social-media a i {
+  font-size: 32px;
+  color: #333;
+  margin-right: 10px;
+}
+
+.social-media a.whatsapp i {
+  color: #25d366;
+}
+
+.social-media a.facebook i {
+  color: #1877f2;
+}
+
+.social-media a.instagram i {
+  background: linear-gradient(
+    45deg,
+    #feda75,
+    #fa7e1e,
+    #d62976,
+    #962fbf,
+    #4f5bd5
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-container h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #5c6e58;
+  font-weight: 700;
+  font-family: "Cinzel", serif;
+}
+
+.footer-container p {
+  font-family: "IBM Plex Mono", monospace;
+  margin-bottom: 20px;
+}
+
+.footer-subscribe p {
+  font-family: "IBM Plex Mono", monospace;
+  margin-bottom: 20px;
+}
+
+.footer-list h3 {
+  font-family: "Roboto", sans-serif;
+}
+
+.footer-subscribe h3 {
+  font-family: "Roboto", sans-serif;
+}
+
+.footer-list li {
+  margin-bottom: 10px;
+}
+
+.footer-list li a {
+  color: #052e05;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 20px;
+}
+
+.input-group input[type="email"] {
+  padding: 8px;
+  width: 220px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 70%;
+  margin-right: 8px;
+}
+
+.input-group button {
+  padding: 8px 12px;
+  margin-left: 8px;
+  border: none;
+  border-radius: 6px;
+  background-color: #5c6e58;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.footer-copy{
+display: flex;
+justify-content: center;
+margin-top: 30px;
+  font-family: "IBM Plex Mono", monospace;
+
+}
+
+.input-group button:hover {
+  background-color: #128c7e; /
+}
+
 @media (max-width: 870px) {
   .sabores {
     flex-direction: column;
@@ -200,9 +366,6 @@ a {
   .header-bg {
     background: none;
     padding-bottom: 120px;
-  }
-
-  .header {
   }
 
   .header-menu a {
