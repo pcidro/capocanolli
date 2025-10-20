@@ -1,136 +1,98 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Capo Canolli</title>
   <link rel="stylesheet" href="style/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
-  <title>CapoCanolli</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <div class="header-bg">
-    <header class="header">
-      <img class="logo" src="/img/logo-removebg-preview.png" alt="">
-      <ul class="header-menu">
-        <li><a href="">Ínicio</a></li>
-        <li><a href="">Cardápio</a></li>
-        <li><a href="">Contato</a></li>
-        <li><a href="">Sobre nós</a></li>
-      </ul>
-    </header>
-  </div>
+
+  <!-- Backdrop para o menu mobile -->
+  <div class="backdrop" data-backdrop hidden></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <!-- Menu Hamburguer -->
+      <button class="menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Logo -->
+      <a class="logo" href="#inicio" aria-label="Ir para o início">
+        <img src="/img/logo-removebg-preview.png" alt="Logo Cannolis" width="80" height="80" />
+      </a>
+
+      <!-- Navegação desktop -->
+      <nav class="nav-desktop" aria-label="Menu principal">
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#sabores">Sabores</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn-order" href="#pedido">Faça seu Pedido</a>
+    </div>
+  </header>
+
+  <!-- Sidebar Mobile -->
+  <aside id="mobile-menu" class="mobile-menu" aria-hidden="true">
+    <button class="close-menu" aria-label="Fechar menu">×</button>
+    <nav class="nav-mobile" aria-label="Menu móvel">
+      <a href="#inicio" class="nav-link">Início</a>
+      <a href="#sobre" class="nav-link">Sobre</a>
+      <a href="#sabores" class="nav-link">Sabores</a>
+      <a href="#contato" class="nav-link">Contato</a>
+      <a href="#pedido" class="btn-order full">Faça seu Pedido</a>
+    </nav>
+  </aside>
+
 
   <section class="hero">
-    <div class="hero-texto">
-      <h1>O verdadeiro sabor da Itália</h1>
-      <p>Cannolis artesanais feitos com paixão e tradição</p>
-      <a href="#sabores" class="botao">Ver Sabores</a>
-    </div>
-  </section>
+    <div class="hero__grid">
+      <div class="hero__text">
 
-  <section id="sabores" class="sabores-container">
-    <h1>Sabores</h1>
-    <div class="sabores">
-      <div class="sabor">
-        <h2 class="titulo-canoli">Cannoli de Limão Siciliano</h2>
-        <img src="/img/cannoli-de-limao-siciliano.jpg" alt="">
-        <p>Recheio cremoso de ricota com raspas frescas de limão siciliano. Um toque cítrico e irresistível!</p>
-        <button>Encomendar Agora</button>
-      </div>
-
-      <div class="sabor">
-        <h2>Cannoli de Baunilha</h2>
-        <img src="/img/cannoli-baunilha.jpg" alt="Cannoli de Baunilha">
-        <p>Recheio suave de ricota com a doçura clássica da baunilha. Uma delícia atemporal e reconfortante.</p>
-        <button>Encomendar Agora</button>
-      </div>
-
-      <div class="sabor">
-        <h2>Cannoli de Chocolate</h2>
-        <img src="/img/chocolate-cannoli.jpg" alt="Canoli de chocolate">
-        <p>Recheio rico e aveludado de chocolate ao leite, perfeito para os amantes de cacau.</p>
-        <button>Encomendar Agora</button>
-      </div>
-
-      <div class="sabor">
-        <h2>Cannoli de Amêndoas</h2>
-        <img src="/img/cannoliamendoas.jpg" alt="">
-        <p>Recheio cremoso de ricota com pedaços crocantes de amêndoas tostadas. Uma combinação de texturas incrível.</p>
-        <button>Encomendar Agora</button>
-      </div>
-    </div>
-  </section>
-
-  <section class="depoimentos">
-    <h1>O que dizem nossos clientes?</h1>
-
-    <div class="conteudo-depoimentos">
-      <div class="img-depoimento">
-        <img src="/img/istockphoto-482479948-612x612.jpg" alt="">
-      </div>
-
-      <div class="texto-depoimento">
-        <blockquote>"Esses cannolis são incríveis! Me lembram os que comi na Itália!" - Ana M.</blockquote>
-
-        <blockquote>"Entrega rápida e sabor delicioso. Já pedi 3 vezes!" - João P.</blockquote>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="footer-container">
-      <div class="footer-contatos">
-        <h1>CapoCanolli</h1>
-        <p>Specializzato in cucina italiana</p>
-        <div class="social-media">
-
-          <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
-
-          <a href="#" class="facebook"><i class="fa-brands fa-facebook"></i></a>
-
-          <a href="#" class="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+        <div class="hero__eyebrow">
+          <span class="stripe stripe--green"></span>
+          <span class="stripe stripe--white"></span>
+          <span class="stripe stripe--red"></span>
         </div>
-      </div>
 
-      <ul class="footer-list">
-        <h3>Menu</h3>
-        <li><a href="#">Ínicio</a></li>
-        <li><a href="#">Cardápio</a></li>
-        <li><a href="#">Sobre nós</a></li>
-        <li><a href="#">Contato</a></li>
-      </ul>
+        <h1 class="hero__title">Um pedaço da</h1>
+        <h1 class="hero__title2"><span class="decor-italia">Itália</span> no Brasil</h1>
 
-      <div class="footer-subscribe">
-        <h3>Inscreva-se</h3>
-        <p>Coloque seu email para ser notificado sobre novidades</p>
+        <p class="hero__subtitle">
+          Autênticos canolis italianos em um ambiente aconchegante que traz a tradição da Itália até você.
+        </p>
 
-        <div class="input-group">
-          <input type="email" id="email">
-          <button>
-            <i class="fa-regular fa-envelope"></i>
-          </button>
+        <div class="hero__ctas">
+          <a href="#" class="btn btn--primary">Faça seu pedido!</a>
+          <a href="#" class="btn btn--secondary">Ver sabores</a>
         </div>
       </div>
     </div>
+
+    <div class="hero__image"></div>
     </div>
-    <div class="footer-copy">
-      <p>&#169CapoCanolli. Todos os direitos reservados</p>
-    </div>
-  </footer>
+  </section>
 
 
 
+  <script type="module" src="script.js"></script>
 </body>
+
+</html>
+
+
+
+
 
 </html>
