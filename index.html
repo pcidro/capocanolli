@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="style/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -89,60 +89,74 @@
   <section id="quem-somos" class="about" aria-labelledby="about-title">
     <div class="about__container">
       <div class="about__grid">
-        <div class="about__text">
-          <h1 id="about-title" class="about__title"> Capocannoli — tradição que atravessa gerações </h1>
-          <p class="about__intro"> Na <strong>Rua da Mooca, em São Paulo</strong>, a Capocannoli mantém viva a tradição italiana há <strong>mais de 15 anos</strong>, com canollis autênticos feitos como manda a receita original. </p>
-          <p class="about__intro"> Usamos ingredientes selecionados, técnicas clássicas e preparo artesanal para garantir crocância de verdade e recheios cremosos cheios de sabor. </p>
-          <p class="about__intro"> Capocannoli: tradição, autenticidade e paixão em cada mordida. </p> <!-- CTA-->
-          <div class="about__cta"> <a class="btn btn--ghost" href="/cardapio" aria-label="Ver cardápio de canollis">Ver cardápio</a> <a class="btn btn--link" href="/contato" aria-label="Falar com a Capocannoli">Faça seu pedido</a> </div>
-        </div>
-        <figure class="about__figure"> <img src="/img/brunocccapo.png" alt="Confeiteiro da Capocannoli finalizando canollis artesanais na cozinha da Rua da Mooca, São Paulo." loading="lazy" width="720" height="900" class="about__image" /> </figure>
-      </div> <!-- ===== MÉTRICAS===== -->
-      <section id="metricas" class="metrics" aria-label="Nossas métricas">
-        <div class="metrics__container">
-          <div class="metrics__grid"> <!-- Anos de Experiência -->
-            <article class="metric" tabindex="0" aria-label="+15 anos de experiência">
-              <div class="metric__icon" aria-hidden="true">⏳</div>
-              <div class="metric__number" data-prefix="+" data-value="15">0</div>
-              <div class="metric__label">Anos de Experiência</div>
-              <div class="metric__sub">Tradição que se sente no sabor</div>
-            </article> <!-- Clientes Satisfeitos -->
-            <article class="metric" tabindex="0" aria-label="+1000 clientes satisfeitos">
-              <div class="metric__icon" aria-hidden="true">😊</div>
-              <div class="metric__number" data-prefix="+" data-value="1000">0</div>
-              <div class="metric__label">Clientes Satisfeitos</div>
-              <div class="metric__sub">Atendimento acolhedor e genuíno</div>
-            </article> <!-- Receitas Exclusivas -->
-            <article class="metric" tabindex="0" aria-label="+50 receitas exclusivas">
-              <div class="metric__icon" aria-hidden="true">⭐</div>
-              <div class="metric__number" data-prefix="+" data-value="50">0</div>
-              <div class="metric__label">Receitas Exclusivas</div>
-              <div class="metric__sub">Clássicos e criações sazonais</div>
-            </article>
+        <div class="about__content">
+          <div class="about__text">
+            <h1 id="about-title" class="about__title">Capocannoli — tradição que atravessa gerações</h1>
+            <p class="about__intro">Na <strong>Rua da Mooca, em São Paulo</strong>, a Capocannoli mantém viva a tradição italiana há <strong>mais de 15 anos</strong>, com canollis autênticos feitos como manda a receita original.</p>
+            <p class="about__intro">Usamos ingredientes selecionados, técnicas clássicas e preparo artesanal para garantir crocância de verdade e recheios cremosos cheios de sabor.</p>
+
           </div>
+
+          <div class="about__values" aria-label="Nossos diferenciais">
+            <div class="about__values-title">
+              <h2>Nossos Diferenciais</h2>
+              <p>O que nos torna especial</p>
+            </div>
+            <ul class="about__values-list">
+              <li>
+                <img class="icon-values" src="/img/italianrecepis.png" alt="Receitas italianas">
+                <div class="value-title">Receitas italianas de verdade</div>
+                <div class="value-subtitle">Autenticidade em cada prato, trazendo os sabores da Itália até sua mesa</div>
+              </li>
+              <li>
+                <img class="icon-values" src="/img/ingredients.png" alt="Ingredientes frescos">
+                <div class="value-title">Ingredientes frescos e selecionados</div>
+                <div class="value-subtitle">Qualidade premium com fornecedores cuidadosamente escolhidos</div>
+              </li>
+              <li>
+                <img class="icon-values" src="/img/service.png" alt="Atendimento acolhedor">
+                <div class="value-title">Atendimento acolhedor</div>
+                <div class="value-subtitle">Uma experiência personalizada e calorosa em cada visita</div>
+              </li>
+            </ul>
+          </div>
+
+
         </div>
-      </section>
-      <div class="about__values" aria-label="Nossos diferenciais">
-        <div class="about__values-title">
-          <h2>Nossos Diferenciais</h2>
-          <p>O que nos torna especial</p>
-        </div>
-        <ul class="about__values-list">
-          <li> <img class="icon-values" src="/img/italianrecepis.png" alt="Receitas italianas">
-            <div class="value-title">Receitas italianas de verdade</div>
-            <div class="value-subtitle">Autenticidade em cada prato, trazendo os sabores da Itália até sua mesa</div>
-          </li>
-          <li> <img class="icon-values" src="/img/ingredients.png" alt="Ingredientes frescos">
-            <div class="value-title">Ingredientes frescos e selecionados</div>
-            <div class="value-subtitle">Qualidade premium com fornecedores cuidadosamente escolhidos</div>
-          </li>
-          <li> <img class="icon-values" src="/img/service.png" alt="Atendimento acolhedor">
-            <div class="value-title">Atendimento acolhedor</div>
-            <div class="value-subtitle">Uma experiência personalizada e calorosa em cada visita</div>
-          </li>
-        </ul>
+
+        <figure class="about__figure">
+          <img src="/img/brunocccapo.png" alt="Confeiteiro da Capocannoli finalizando canollis artesanais na cozinha da Rua da Mooca, São Paulo." loading="lazy" width="720" height="900" class="about__image">
+          <section id="metricas" class="metrics" aria-label="Nossas métricas">
+            <div class="metrics__container">
+              <div class="metrics__grid">
+                <article class="metric" tabindex="0" aria-label="+15 anos de experiência">
+                  <div class="metric__icon icon-experience" aria-hidden="true"><img src="/img/hourglass.svg" alt=""></div>
+                  <div class="metric__number" data-prefix="+" data-value="15">0</div>
+                  <div class="metric__label">Anos de Experiência</div>
+                  <div class="metric__sub">Tradição que se sente no sabor</div>
+                </article>
+                <article class="metric" tabindex="0" aria-label="+1000 clientes satisfeitos">
+                  <div class="metric__icon icon-happy" aria-hidden="true"><img src="/img/happy.svg" alt=""></div>
+                  <div class="metric__number" data-prefix="+" data-value="1000">0</div>
+                  <div class="metric__label">Clientes Satisfeitos</div>
+                  <div class="metric__sub">Atendimento acolhedor e genuíno</div>
+                </article>
+                <article class="metric" tabindex="0" aria-label="+50 receitas exclusivas">
+                  <div class="metric__icon icon-dessert" aria-hidden="true"><img src="/img/desert.svg" alt=""></div>
+                  <div class="metric__number" data-prefix="+" data-value="50">0</div>
+                  <div class="metric__label">Receitas Exclusivas</div>
+                  <div class="metric__sub">Clássicos e criações sazonais</div>
+                </article>
+              </div>
+            </div>
+          </section>
+        </figure>
       </div>
+
+
     </div>
+  </section>
+
   </section>
 
 

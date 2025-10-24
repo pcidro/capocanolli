@@ -28,7 +28,7 @@ export default function initAnimaNumeros() {
     }
 
     initObserver() {
-      const observerOptions = { threshold: 0.4 };
+      const observerOptions = { threshold: 1.0 };
 
       this.observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -43,5 +43,5 @@ export default function initAnimaNumeros() {
     }
   }
 
-  new NumberAnimator(".metric__number", { duration: 2000 });
+  new NumberAnimator(".metric__number", { duration: 5000 });
 }

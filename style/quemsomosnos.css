@@ -1,5 +1,5 @@
-/* ===== About Section ===== */
 .about {
+  padding-top: 60px;
   background: #fff;
 }
 
@@ -17,36 +17,53 @@
   align-items: center;
 }
 
+.about__content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 .about__title {
-  font-family: "Poppins", sans-serif;
-  font-size: clamp(1.75rem, 2.5vw, 2.5rem);
-  line-height: 1.2;
-  color: #111;
-  margin: 0 0 16px;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 3vw, 3.2rem);
   font-weight: 700;
+  color: #111;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  position: relative;
+  text-align: left;
+}
+
+.about__title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #c41e3a;
+  margin-top: 12px;
+  border-radius: 2px;
 }
 
 .about__intro {
   font-family: "Roboto", sans-serif;
-  color: #333;
-  font-size: 1rem;
-  line-height: 1.75;
-  margin: 0 0 14px;
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.8;
+  max-width: 680px;
 }
 
 .about__cta {
   display: flex;
-  gap: 16px;
-  margin-top: 18px;
+  justify-content: center;
+  align-items: center;
 }
 
-/* ===== Buttons ===== */
 .btn {
   font-family: "Roboto", sans-serif;
   font-weight: 600;
   font-size: 0.95rem;
   border-radius: 999px;
-  padding: 10px 18px;
+  padding: 20px 35px;
   text-decoration: none;
   border: 1px solid transparent;
   cursor: pointer;
@@ -80,9 +97,11 @@
   opacity: 1;
 }
 
-/* ===== Image ===== */
 .about__figure {
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 .about__image {
@@ -98,7 +117,6 @@
   transform: scale(1.02);
 }
 
-/* ===== Divisor Tricolor ===== */
 .about__divider {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -110,18 +128,15 @@
 .about__divider--green {
   background: #138a36;
 }
-
 .about__divider--white {
   background: #fff;
   border-top: 1px solid #e8e8e8;
   border-bottom: 1px solid #e8e8e8;
 }
-
 .about__divider--red {
   background: #c41e3a;
 }
 
-/* ===== Metrics / Contadores ===== */
 .metrics {
   border: none;
 }
@@ -136,7 +151,7 @@
   background: #fff;
   border: 1px solid #eee;
   border-radius: 14px;
-  padding: 18px 14px;
+  padding: 5px 8px;
   text-align: center;
   transition: all 0.2s ease;
 }
@@ -148,8 +163,61 @@
 }
 
 .metric__icon {
-  font-size: 1.2rem;
-  margin-bottom: 4px;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 0.5rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.metric__icon::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(
+    to right,
+    #009246 33%,
+    #ffffff 33%,
+    #ffffff 66%,
+    #ce2b37 66%
+  );
+  border-radius: 2px;
+}
+
+.metric__icon img {
+  margin-top: 20px;
+}
+
+.metric__icon {
+  width: 48px;
+  height: 48px;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  margin: 0 auto 0.5rem auto;
+}
+
+.icon-experience img {
+  filter: invert(43%) sepia(0%) saturate(0%) hue-rotate(145deg) brightness(88%)
+    contrast(85%);
+}
+
+.icon-happy img {
+  filter: invert(83%) sepia(55%) saturate(645%) hue-rotate(352deg)
+    brightness(98%) contrast(92%);
+}
+
+.icon-dessert img {
+  filter: invert(73%) sepia(31%) saturate(384%) hue-rotate(8deg) brightness(92%)
+    contrast(85%);
 }
 
 .metric__number {
@@ -157,14 +225,9 @@
   font-size: clamp(1.5rem, 3vw, 2.2rem);
   margin-bottom: 4px;
   line-height: 1.1;
-  color: #138a36;
+  color: #555;
   letter-spacing: 0.5px;
   font-weight: 700;
-}
-
-.metric:nth-child(2) .metric__number,
-.metric:nth-child(4) .metric__number {
-  color: #c41e3a;
 }
 
 .metric__label {
@@ -179,7 +242,6 @@
   margin-top: 4px;
 }
 
-/* ===== Values Section ===== */
 .about__values {
   max-width: 1200px;
   margin: 0 auto;
@@ -278,14 +340,16 @@
   letter-spacing: 0.3px;
 }
 
-/* ===== Responsivo ===== */
 @media (max-width: 1024px) {
   .about__grid {
     grid-template-columns: 1fr;
   }
-
   .about__figure {
-    order: -1;
+    order: 2;
+  }
+
+  .about__content {
+    order: 1;
   }
 }
 
@@ -301,15 +365,27 @@
     padding: 40px 16px;
   }
 
+  .about__title {
+    text-align: center;
+  }
+
+  .about__title::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about__intro {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .about__values-list {
     grid-template-columns: 1fr;
     gap: 24px;
   }
-
   .about__values-title h2 {
     font-size: 26px;
   }
-
   .about__values-list li {
     padding: 32px 24px;
   }
@@ -319,7 +395,6 @@
   .metrics__grid {
     grid-template-columns: 1fr;
   }
-
   .about__cta {
     flex-direction: column;
     align-items: flex-start;
